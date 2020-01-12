@@ -8,10 +8,10 @@ The size of a page (in bytes) will be passed as the 2nd argument on the command 
 The number of page frames that can be held in main memory will be passed as the 3rd argument on the command line (See Running your code below for details).
 
 * As the simulator processes each memory event from the trace:
-1. It should check to see if the corresponding page is in physical memory (hit), or whether it needs to be swapped in from disk (pagefault).\
-2. If a pagefault has occurred, your simulator may need to choose a page to remove from physical memory. When choosing a page to replace, your simulator should use the algorithm specified by the 4th argument passed on the command line (See Running your code below for details).\
+1. It should check to see if the corresponding page is in physical memory (hit), or whether it needs to be swapped in from disk (pagefault).
+2. If a pagefault has occurred, your simulator may need to choose a page to remove from physical memory. When choosing a page to replace, your simulator should use the algorithm specified by the 4th argument passed on the command line (See Running your code below for details).
 3. If the page to be replaced is dirty, it would need to be saved back to the swap disk. Your simulator
-should track when this occurs.\
+should track when this occurs.
 4. Finally, the new page is to be loaded into memory from disk, and the page table is updated.
 
 
@@ -37,7 +37,7 @@ For example, if the interval provided is 5, then bit shifting should occur for a
 ### Part 4 - Enhanced Additional Reference Bits Algorithm
 Let’s combine the best aspects of ESC and ARB to create a new algorithm, Enhanced ARB (EARB). This algorithm will combine the improved access history of ARB with the awareness of modified pages from ESC.\
 Your task is to update your simulator to use the Enhanced ARB algorithm described below.\
-Your simulator should use the Enhanced Additional Reference Bits page replacement algorithm if the 4th argument passed on the command line is set to EARB (See Running your code below for details).\
+Your simulator should use the Enhanced Additional Reference Bits page replacement algorithm if the 4th argument passed on the command line is set to EARB (See Running your code below for details).
 
 This algorithm works as follows:\
 If no pages are modified, or if only modified pages are resident, the algorithm should perform the same as ARB.\
@@ -65,9 +65,9 @@ For example, your code might be run like this:
 ./memsim test.trace 4096 32 EARB 4
 ```
 where:
-* The program being run is ./memsim\
-* the name of the input file is test.trace\
-* a page is 4096 bytes,\
-* there are 32 frames in physical memory,\
-* the Enhanced ARB algortihm ( EARB ) is used for page replacement,\
+* The program being run is ./memsim
+* the name of the input file is test.trace
+* a page is 4096 bytes,
+* there are 32 frames in physical memory,
+* the Enhanced ARB algortihm ( EARB ) is used for page replacement,
 * and the (E)ARB shift register shifts every 4 memory accesses.
